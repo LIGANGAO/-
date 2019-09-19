@@ -31,6 +31,12 @@ namespace ConsoleApp1
             //递归  斐波那契数列
             Console.WriteLine(Fibonacci(19));
 
+            //1-10的和
+            Sum();
+
+            //99乘法口诀
+            Factorial();
+
             //异步
             callMethod();
 
@@ -195,6 +201,43 @@ namespace ConsoleApp1
         {
             if (number < 2) return number;
             return Fibonacci(number - 2) + Fibonacci(number - 1);
+        }
+        #endregion
+
+        //1-10的和
+        #region
+        public static void Sum()
+        {
+            int a = 0;
+            for(int i = 1; i < 11; i++)
+            {
+                if (i == 10)
+                {
+                    Console.Write(i + "=");
+                    a = a + i;
+                }
+                else
+                {
+                    Console.Write(i + "+");
+                    a = a + i;
+                }
+            }
+            Console.WriteLine(a);
+        }
+        #endregion
+
+        //99乘法口诀
+        #region
+        public static void Factorial()
+        {
+            for(int i = 1; i < 10; i++)
+            {
+                for(int j = 1; j <= i; j++)
+                {
+                    Console.Write(i + "*" + j + "=" + i * j + "\t");
+                }
+                Console.WriteLine();
+            }           
         }
         #endregion
 
