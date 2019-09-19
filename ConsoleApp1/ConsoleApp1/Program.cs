@@ -37,6 +37,9 @@ namespace ConsoleApp1
             //99乘法口诀
             Factorial();
 
+            //成绩判断
+            Grade();
+
             //异步
             callMethod();
 
@@ -276,6 +279,18 @@ namespace ConsoleApp1
         public static void Method3(int count)
         {
             Console.WriteLine("Total count is " + count);
+        }
+        #endregion
+
+        //成绩判断
+        #region
+        public static void Grade()
+        {
+            int score = 0;
+            Console.WriteLine("请输入成绩");
+            score = Convert.ToInt32(Console.ReadLine());
+            string s = (score > 90) ? "优" : (score > 60) ? "好" : "差";
+            Console.WriteLine(score + "分属于" + s);
         }
         #endregion
     }
